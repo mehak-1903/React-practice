@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TodoList from "./components/TodoList.jsx";
-
+import { FaTrash } from 'react-icons/fa';
 
 function App() {
   const [input, setInput] = useState('');
@@ -15,7 +15,10 @@ function App() {
     setInput("");
   }
 
-
+  function deleteTodo(index){
+    const updatedTodos = todos.filter((_, i) => i !== index);
+    setTodos(updatedTodos)
+  }
 
   function handleInput (e){
     setInput(e.target.value);
@@ -26,7 +29,7 @@ function App() {
       <button onClick={addBtn}>Add Button.</button>
 
       {/* Pass Todos to todo list */}
-      <TodoList todos = {todos} />
+      <TodoList todos = {todos} deleteTodo = {deleteTodo}/>
     </>
   )
 }

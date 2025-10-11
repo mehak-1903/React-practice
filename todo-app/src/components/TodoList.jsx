@@ -1,11 +1,12 @@
+import { FaTrash } from "react-icons/fa";
 
-
-function TodoList({todos}){
+function TodoList({todos, deleteTodo}){
     return(
         <>
         {todos.map((todo, index) => {
-            return (<div key={index} className="display:flex; justify-content: space-between;">
+            return (<div key={index}>
                 {todo}
+                <button onClick = {() => deleteTodo(index)}><FaTrash /></button>
             </div>)
         })}
         </>
