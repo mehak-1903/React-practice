@@ -1,8 +1,15 @@
-function TodoItem(){
+import {FaTrash, FaPen} from 'react-icons/fa';
+
+function TodoItem({todo, index, deleteTodo, toggleBtn}){
     return(
-        <>
-        <h1>TodoItem</h1>
-        </>
+        
+        <div style={{textDecoration : todo.done ? 'line-through' : 'none'}}>
+            {todo.text}
+            <button onClick={() => toggleBtn(index)}><FaPen /></button>
+            <button onClick={() => deleteTodo(index)}><FaTrash /></button>
+        </div>
+
+        
     )
 }
 

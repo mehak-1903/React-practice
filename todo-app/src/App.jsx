@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TodoList from "./components/TodoList.jsx";
+import AddTodo from "./components/AddTodo.jsx";
 
 function App() {
   const [input, setInput] = useState('');
@@ -37,8 +38,8 @@ function App() {
   }
   return (
     <>
-      <input type="text" placeholder="Enter your task here." value={input} onChange={handleInput}/><br/>
-      <button onClick={addBtn}>Add Button.</button>
+      {/* Adding todos */}
+      <AddTodo input={input} handleInput={handleInput} addBtn={addBtn} />
 
       {/* Pass Todos to todo list */}
       <TodoList todos = {todos} deleteTodo = {deleteTodo} toggleBtn = {toggleBtn}/>
