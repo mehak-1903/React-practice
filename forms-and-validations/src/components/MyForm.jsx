@@ -1,4 +1,5 @@
-import React from 'react';
+// Using React Hook Form
+
 import { useForm } from 'react-hook-form';
 
 function MyForm() {
@@ -19,6 +20,12 @@ function MyForm() {
         {...register('email', {required: 'Name is required', pattern: { value : /^\S+@\S+$/i, message: 'Invalid email.'}})} 
         placeholder='Enter your email.'/><br/>
         {errors.email && <p>{errors.email.message}</p>}
+
+        <label>Password: </label>
+        <input
+        {...register('password', { required: 'Password is required', minLength: {value: 6, message: 'Minimum 6 characters.'}, maxLength: {value: 15, message: 'Maximum 15 characters.'}})} 
+        placeholder='Enter password here.' type='password'/><br/> 
+        {errors.password && <p>{errors.password.message}</p>}
 
         <button type="submit">Click Me</button>
     </form>
