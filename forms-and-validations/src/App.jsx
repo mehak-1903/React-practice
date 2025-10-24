@@ -1,10 +1,12 @@
 import './App.css'
-import MyForm from './components/MyForm'
+// import MyForm from './components/MyForm'
+import Form1 from './FormUsingFormik/Form1.jsx'
 
 function App() {
   return (
     <>
-    <MyForm />
+    {/* <MyForm /> */}
+    <Form1 />
     </>
   )
 }
