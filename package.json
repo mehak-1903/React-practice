@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/mehak-1903/React-practice/issues"
   },
-  "homepage": "https://github.com/mehak-1903/React-practice#readme"
+  "homepage": "https://github.com/mehak-1903/React-practice#readme",
+  "dependencies": {
+    "@tanstack/react-query": "^5.90.5"
+  }
 }
