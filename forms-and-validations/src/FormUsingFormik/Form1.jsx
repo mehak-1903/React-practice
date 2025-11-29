@@ -15,7 +15,7 @@ function Form1() {
             if(!values.email){
                 errors.email = "Email is required"
             }else if(!/^\S+@\S+\.\S+$/.test(values.email)){
-                errors.email = "Email is required"
+                errors.email = "Please enter valid email."
             }
             return errors;
         }
